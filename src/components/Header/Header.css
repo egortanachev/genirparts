@@ -1,0 +1,21 @@
+.header__top{
+    display: block;
+    background: var(--grey-color);
+    padding: 10px 0;
+}
+
+.header__top .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__contact,
+.header__terms{
+    display: flex;
+    gap: 25px;
+}
+
+.header__contact a{
+    color: var(--dark-grey-color)!important;
+}
