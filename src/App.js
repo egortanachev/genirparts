@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
         <Router>
+          <div className='header__height'></div>
           <Header />
 
           <Routes>

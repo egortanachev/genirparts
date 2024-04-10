@@ -12,6 +12,7 @@
     --dark-grey-color: #828282;
 
     --gradient: linear-gradient(270deg, #2C2D2D 0.04%, #828282 100.01%);
+    --shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.06);
 }
 
 *{
@@ -32,6 +33,10 @@ a{
 
 li{
     list-style: none;
+}
+
+input:focus{
+    outline: none;
 }
 
 .container{
@@ -105,4 +110,10 @@ li{
 
 .font-weight-700{
     font-weight: 700;
+}
+
+.header__height{
+    display: block;
+    height: 120px;
+    margin-bottom: 50px;
 }

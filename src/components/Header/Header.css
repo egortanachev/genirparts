@@ -1,3 +1,14 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+/* top */
+
 .header__top{
     display: block;
     background: var(--grey-color);
@@ -16,6 +27,136 @@
     gap: 25px;
 }
 
-.header__contact a{
-    color: var(--dark-grey-color)!important;
+.header__contact a,
+.header__terms a{
+    color: var(--dark-grey-color);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.header__contact a:hover,
+.header__terms a:hover{
+    color: var(--black-color);
+}
+
+.header__terms a::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--dark-grey-color);
+    transition: all 0.2s ease;
+}
+
+.header__terms a:hover:before{
+    background: var(--black-color);
+}
+
+/* bottom */
+
+.header__bottom{
+    padding: 18px 0;
+}
+
+.header__bottom .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__products{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 40px;
+}
+
+.header__catalog{
+    display: flex;
+    width: 117px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    gap: 12px;
+    background: var(--green-color);
+    transition: all 0.2s ease;
+}
+
+.header__catalog:hover{
+    background: var(--active-green-color);
+}
+
+.header__catalog span{
+    color: var(--white-color);
+}
+
+.header__find{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header__find input{
+    border: 0;
+    background: none;
+}
+
+.header__find input[type=text]{
+    width: 297px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    border: 1.25px solid var(--green-color);
+    transition: all 0.2s ease;
+    padding: 0 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+.header__find input[type=text]::placeholder{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    color: var(--dark-grey-color);
+}
+
+.header__find input[type=submit]{
+    width: 87px;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+    background: var(--green-color);
+    transition: all 0.2s ease;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.header__find input[type=submit]:hover{
+    background: var(--active-green-color);
+}
+
+.header__link{
+    display: flex;
+    gap: 30px;
+}
+
+.header__link a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header__link a span{
+    color: var(--dark-grey-color);
+    transition: all 0.2s ease;
+}
+
+.header__link a:hover span{
+    color: var(--black-color);
 }
