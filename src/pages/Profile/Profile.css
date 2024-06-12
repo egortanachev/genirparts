@@ -1,0 +1,117 @@
+.section__profile{
+    padding: 170px 0 40px;
+}
+
+.profile__cards{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile__card{
+    display: block;
+    width: calc((100% - 30px) / 2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.profile__card1,
+.profile__card2{
+    min-height: 254px;
+}
+
+.profile__card3,
+.profile__card4{
+    background: var(--gradient);
+    color: var(--white-color);
+    padding: 24px 26px;
+    min-height: 205px;
+}
+
+.profile__card-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: var(--grey-color);
+}
+
+.profile__card-body{
+    padding: 24px 26px;
+}
+
+.profile__card1 .profile__card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile__card2 .profile__card-body p{
+    line-height: 150%;
+    color: var(--dark-grey-color);
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.profile__card2 .profile__card-body p::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--dark-grey-color);
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+}
+
+.profile__user{
+    display: flex;
+    gap: 14px;
+}
+
+.profile__user span:first-child{
+    color: var(--dark-grey-color);
+}
+
+.profile__card3 a,
+.profile__card4 a{
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+
+.profile__card3 p,
+.profile__card4 p{
+    margin-top: 10px;
+    width: 245px;
+    display: block;
+}
+
+.profile__card3 .profile__banner-img{
+    display: block;
+    width: 224px;
+    position: absolute;
+    left: 327px;
+    top: 45px;
+}
+
+.profile__card4 .profile__banner-img{
+    display: block;
+    width: 238px;
+    position: absolute;
+    left: 322px;
+    top: -4px;
+}
+
+.profile__banner-imgbg{
+    display: block;
+    width: 243px;
+    height: 243px;  
+    position: absolute;
+    left: 291px;
+    top: 41px;
+    background: url(./img/bg.svg);
+}

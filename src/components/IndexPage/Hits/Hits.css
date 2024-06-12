@@ -1,0 +1,52 @@
+.section__hits{
+    padding: 40px 0;
+}
+
+.hits__grid{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.hits__info-image{
+    display: block;
+    width: calc((1140px - 30px * 3) / 4);
+    height: 207px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-color);
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    object-fit: contain;
+}
+
+.hits__info-article{
+    color: var(--dark-grey-color);
+    margin: 20px 0 8px 0;
+}
+
+.hits__info-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hits__info-price{
+    color: var(--green-color);
+}
+
+.hits__info-button{
+    width: 134px;
+    height: 42px;
+    background: var(--green-color);
+    color: var(--white-color);
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Gilroy', sans-serif;
+    cursor: pointer;
+}
+
+.hits__info-button:hover{
+    background: var(--active-green-color);
+}

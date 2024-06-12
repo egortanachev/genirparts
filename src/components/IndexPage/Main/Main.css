@@ -1,0 +1,156 @@
+.section__main{
+    display: block;
+    padding: 170px 0 40px 0;
+    background: #fff;
+}
+
+.section__main .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main__row{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.main__card1,
+.main__card2{
+    display: block;
+    height: 400px;
+    border-radius: 15px;
+    padding: 50px 30px;
+    background: var(--grey-color);
+    box-shadow: var(--shadow);
+    color: var(--black-color);
+    overflow: hidden;
+    position: relative;
+    line-height: 120%;
+}
+
+.main__card1 span,
+.main__card2 span{
+    display: block;
+    color: var(--green-color);
+    font-weight: 400;
+}
+
+.main__card1{
+    width: 750px;
+}
+
+.main__card2{
+    flex: 1;
+}
+
+.main__card3,
+.main__card4,
+.main__card5{
+    display: block;
+    padding: 20px;
+    height: 185px;
+    flex: 1;
+    border-radius: 15px;
+    background: var(--gradient);
+    box-shadow: var(--shadow);
+    color: var(--white-color);
+    overflow: hidden;
+    position: relative;
+    line-height: 120%;
+    cursor: pointer;
+}
+
+.main__card3 span,
+.main__card4 span{
+    display: block;
+    width: 180px;
+}
+
+.main__card5 span{
+    display: block;
+    width: 140px;
+}
+
+.main__card img{
+    position: absolute;
+}
+
+.main__card .img__bg{
+    display: block;
+    position: absolute;
+}
+
+
+.main__card1 img{
+    width: 476px;
+    right: 0;
+    bottom: 0;
+}
+
+.main__card2 img{
+    width: 223px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.main__card3 img{
+    width: 192px;
+    top: 45px;
+    left: 204px;
+}
+
+.main__card4 img{
+    width: 131px;
+    top: 27px;
+    left: 195px;
+}
+
+.main__card5 img{
+    width: 133px;
+    top: 31px;
+    left: 199px;
+}
+
+.main__card1 .img__bg{
+    width: 378px;
+    height: 433px;
+    background: url(./img/card1.svg);
+    left: 403px;
+    top: 52px;
+}
+
+.main__card2 .img__bg{
+    width: 251px;
+    height: 239px;
+    background: url(./img/card2.svg);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 195px;
+}
+
+.main__card3 .img__bg{
+    width: 201px;
+    height: 201px;
+    background: url(./img/card3.svg);
+    left: 186px;
+    top: 20px;
+}
+
+.main__card4 .img__bg{
+    width: 201px;
+    height: 201px;
+    background: url(./img/card4.svg);
+    left: 186px;
+    top: 20px;
+}
+
+.main__card5 .img__bg{
+    width: 293px;
+    height: 293px;
+    background: url(./img/card5.svg);
+    left: 93px;
+    top: 18px;
+}

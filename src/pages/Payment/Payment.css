@@ -1,0 +1,22 @@
+.section__payment{
+    padding: 170px 0 80px 0;
+}
+
+.section__payment p{
+    margin-bottom: 12px;
+    line-height: 150%;
+}
+
+.section__payment ul{
+    margin-bottom: 12px;
+    margin-left: 20px;
+}
+
+.section__payment li{
+    list-style: inside;
+    line-height: 150%;
+}
+
+.section__payment p:last-child{
+    margin-bottom: 0;
+}

@@ -1,0 +1,35 @@
+.section__about{
+    padding: 40px 0;
+}
+
+.about__content{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.about__content div p{
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+
+.about__content div p span{
+    font-weight: 500;
+}
+
+.about__content div p span.secondWord{
+    color: var(--green-color);
+}
+
+.about__content div p:last-child{
+    margin-bottom: 0;
+}
+
+.about__content img{
+    display: block;
+    width: 555px;
+    height: 428px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}

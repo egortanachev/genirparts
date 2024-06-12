@@ -1,0 +1,17 @@
+.section__advantages{
+    padding: 40px 0;
+}
+
+.advantages__group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item h4{
+    color: var(--green-color);
+    margin: 14px 0 10px 0;
+}
+
+.advantages__item p{
+    line-height: 140%;
+}

@@ -1,0 +1,145 @@
+.section__basket{
+    padding-top: 170px;
+    min-height: calc(100vh - 305px);
+}
+
+.basket__page .column1{
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    width: 124px;
+}
+
+.basket__page .column2{
+    display: flex;
+    padding: 0 16px;
+    width: 605px;
+}
+
+.basket__page .column3{
+    display: flex;
+    padding: 0 16px;
+    width: 95px;
+}
+
+.basket__page .column4,
+.basket__page .column5{
+    display: flex;
+    padding: 0 16px;
+    width: 110px;
+    justify-content: center;
+}
+
+.basket__page .column6{
+    display: flex;
+    padding: 0 16px;
+    width: 101px;
+    justify-content: center;
+}
+
+.basket__page .column6 img{
+    cursor: pointer;
+}
+
+.total-price{
+    margin-top: 30px;
+}
+
+.basket__bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.basket__clear{
+    display: block;
+    width: 176px;
+    height: 44px;
+    background: var(--green-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Gilroy', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.basket__clear:hover{
+    background: var(--active-green-color);
+}
+
+.basket__next{
+    display: flex;
+    background: var(--gradient);
+    padding: 20px 25px;
+    gap: 40px;
+    border-radius: 15px;
+}
+
+.basket__next span{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--white-color);
+}
+
+.basket__next a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 192px;
+    height: 54px;
+    border-radius: 12px;
+    background: var(--green-color);
+    color: var(--white-color);
+    transition: all 0.2s ease;
+}
+
+.basket__next a:hover{
+    background: var(--active-green-color);
+}
+
+/* steps */
+
+.block_steps{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 16px;
+    position: relative;
+}
+
+.step::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--dark-grey-color);
+    transform: scaleY(0.5);
+    transition: transform 0.2s ease;
+}
+
+.active.step::before{
+    transform: scaleY(1);
+}
+
+.step *{
+    color: var(--dark-grey-color);
+}
+
+.active .step__title{
+    color: var(--black-color);
+}
+
+.active .step__description{
+    color: var(--green-color);
+}

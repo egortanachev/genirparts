@@ -1,0 +1,22 @@
+.section__delivery{
+    padding: 170px 0 80px 0;
+}
+
+.section__delivery p{
+    margin-bottom: 12px;
+    line-height: 150%;
+}
+
+.section__delivery p:last-child{
+    margin-bottom: 0;
+}
+
+.section__delivery ul{
+    margin-bottom: 12px;
+    margin-left: 20px;
+}
+
+.section__delivery li{
+    list-style: inside;
+    line-height: 150%;
+}

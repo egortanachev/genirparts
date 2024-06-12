@@ -1,30 +1,46 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom';
 
 // Components
-import Header from './components/Header/Header';
-import Footer from './components/Footer';
-
-// Pages
-import Main from './pages/Main';
-import Payment from './pages/Payment';
-import Delivery from './pages/Delivery';
+import ScrollToTop from './components/Other/ScrollToTop';
+import Login from './components/Other/Login/Login';
+import Header from './components/Other/Header/Header';
+import Footer from './components/Other/Footer/Footer';
+import AppRoutes from './AppRoutes';
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleProfileClick = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  return (
+    <Router>
+      <AppContent 
+        isPopupOpen={isPopupOpen} 
+        handleProfileClick={handleProfileClick} 
+        handleClosePopup={handleClosePopup} 
+      />
+    </Router>
+  );
+}
+
+function AppContent({ isPopupOpen, handleProfileClick, handleClosePopup }) {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
   return (
     <div className="App">
-        <Router>
-          <div className='header__height'></div>
-          <Header />
-
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/delivery" element={<Delivery />} />
-          </Routes>
-
-          <Footer />
-        </Router>
+      <ScrollToTop />
+      <Login isOpen={isPopupOpen} onClose={handleClosePopup} />
+      {!isAdminRoute && <Header onProfileClick={handleProfileClick} />}
+      <AppRoutes isAdminRoute={isAdminRoute} />
+      {!isAdminRoute && <Footer />}
     </div>
   );
 }

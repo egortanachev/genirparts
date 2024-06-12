@@ -1,0 +1,33 @@
+.section__catalog{
+    padding: 170px 0 80px 0;
+    min-height: 100vh;
+}
+
+.section__catalog ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.section__catalog a{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section__catalog img{
+    display: block;
+    width: 262px;
+    height: 207px;
+    border-radius: 20px;
+    border: 1px solid var(--grey-color);
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    object-fit: contain;
+}
+
+.section__catalog p{
+    display: block;
+    color: var(--black-color);
+    width: 262px;
+}

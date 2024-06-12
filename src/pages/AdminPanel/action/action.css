@@ -1,0 +1,144 @@
+.adminpanel__return{
+    color: var(--black-color);
+    transition: all 0.2s ease;
+    padding-left: 60px;
+    position: relative;
+}
+
+.adminpanel__return::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(./../img/return.svg);
+    background-size: contain;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.adminpanel__return:hover{
+    color: var(--green-color);
+}
+
+.section__adminpanel form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section__adminpanel form .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.section__adminpanel form .form-group input{
+    display: block;
+    width: calc((100% - 20px) / 2);
+    height: 50px;
+    padding: 0 23px;
+    border-radius: 10px;
+    border: 1px solid var(--dark-grey-color);
+    font-family: 'Gilroy', sans-serif;
+}
+
+.section__adminpanel form .form-group select{
+    display: block;
+    width: calc((100% - 20px) / 2);
+    height: 50px;
+    padding: 0 23px;
+    border-radius: 10px;
+    border: 1px solid var(--dark-grey-color);
+    font-family: 'Gilroy', sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    color: #757575;
+    outline: 0;
+}
+
+.section__adminpanel form .form-group select.selected{
+    color: #000;
+}
+
+.section__adminpanel form .form-group select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 14px;
+    height: 8px;
+    background: #000;
+    
+}
+
+.section__adminpanel form .form-group textarea{
+    display: block;
+    width: calc((100% - 20px) / 2);
+    height: 100px;
+    padding: 16px 23px;
+    border-radius: 10px;
+    border: 1px solid var(--dark-grey-color);
+    font-family: 'Gilroy', sans-serif;
+    resize: none;
+    outline: 0;
+}
+
+.section__adminpanel form button{
+    width: 200px;
+    height: 52px;
+    background: var(--green-color);
+    border-radius: 10px;
+    color: var(--white-color);
+    font-family: 'Gilroy', sans-serif;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.section__adminpanel form button:hover{
+    background: var(--active-green-color);
+    line-height: 100%;
+}
+
+.section__adminpanel form .form-group label{
+    padding-left: 75px;
+    cursor: pointer;
+    color: var(--green-color);
+    position: relative;
+}
+
+.section__adminpanel form .form-group label::before{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(./../img/upload.svg);
+    background-position: center center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-message,
+.response-message{
+    margin-top: 25px;
+    line-height: 150%;
+}
+
+.error-message span{
+    display: block;
+    color: var(--error-color);
+}
+
+.response-message span{
+    display: block;
+    color: var(--success-color)
+}
