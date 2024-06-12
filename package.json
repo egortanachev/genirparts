@@ -2,6 +2,7 @@
   "name": "genirparts",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://egortanachev.github.io/genirparts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,7 +17,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "proxy": "http://localhost:5001",
   "eslintConfig": {
