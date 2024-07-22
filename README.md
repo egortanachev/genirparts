@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# GenirParts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание проекта
 
-## Available Scripts
+GenirParts - это веб-приложение для управления каталогом автозапчастей. Проект использует [GenirParts API](https://github.com/egortanachev/genirparts_api) для взаимодействия с данными о продуктах. Приложение построено с использованием React.
 
-In the project directory, you can run:
+## Содержание
 
-### `npm start`
+- [Описание проекта](#описание-проекта)
+- [Визуализация работы](#визуализация-работы)
+- [Функциональные возможности](#функциональные-возможности)
+- [Технологии](#технологии)
+- [Установка и настройка](#установка-и-настройка)
+- [Автор](#автор)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Визуализация работы
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![Превью видео](https://img.youtube.com/vi/ERfX6F9A_uc/0.jpg)](https://youtu.be/ERfX6F9A_uc)
 
-### `npm test`
+## Функциональные возможности
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Авторизация по электронной почте и паролю
+- Регистрация с заполнением обязательных полей: электронная почта, пароль, номер телефона
+- Просмотр каталога со всей продукцией
+- Поиск товаров по артикулу или наименованию
+- Фильтрация товаров по наличию и характеристикам
+- Фильтрация товаров по категориям
+- Фильтрация товаров по конкретному производителю
+- Сортировка товаров по количеству, наименованию и стоимости
+- Механизм добавления товаров в корзину
+- Механизм добавления товаров в избранные
+- Возможность просматривать содержимое корзины и редактировать заказ
+- Оформление заказа с выбором адреса доставки и способа оплаты
+- Доступ в личный кабинет
+- Редактирование контактной информации в личном кабинете
+- Возможность просматривать совершенные заказы
+- Добавление контрагентов с привязкой к компании заказчика
+- Редактирование контрагентов
+- Удаление контрагентов
+- Просмотр баланса на текущий момент
+- Отправка форм обратной связи для уточнения вопросов
 
-### `npm run build`
+## Технологии
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Установка и настройка
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Клонирование репозитория
 
-### `npm run eject`
+```bash
+git clone https://github.com/egortanachev/genirparts.git
+cd genirparts
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Запуск проекта
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm i
+npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Автор
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Егор Таначев**
 
-## Learn More
+**Telegram** – [egor_tanachev](https://t.me/egor_tanachev)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Эл. почта** – [e.tanachev@inbox.ru](mailto:e.tanachev@inbox.ru)
