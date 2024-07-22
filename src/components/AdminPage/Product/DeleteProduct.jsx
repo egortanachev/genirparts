@@ -6,19 +6,26 @@ import './../action.css';
 import './Product.css';
 // Component
 import PageTitle from './../../Other/PageTitle';
+import LoadingSpinner from './../../Other/LoadingSpinner/LoadingSpinner';
+// Image
+import deleteProduct from './img/delete.svg';
 
 const DeleteProduct = () => {
     const [deletedProductId, setDeletedProductId] = useState(null);
     const [error, setError] = useState(null);
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
+            setLoading(true);
             try {
                 const res = await axios.get('/api/products');
                 setProducts(res.data);
             } catch (err) {
                 setError(err);
+            } finally {
+                setLoading(false);
             }
         };
 
@@ -37,8 +44,12 @@ const DeleteProduct = () => {
         }
     };
 
+    const formatPrice = (price) => {
+        return price.toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' ₽';
+    };
+
     return (
-        <section className="section__adminpanel" id='section__adminpanel'>
+        <section className="section__adminpanel deleteProduct" id='section__adminpanel'>
             <div className='container'>
                 <div className="adminpanel__head">
                     <PageTitle
@@ -48,28 +59,38 @@ const DeleteProduct = () => {
                     <Link to='/admin' className='adminpanel__return font-size-22 font-weight-500'>Вернуться обратно</Link>
                 </div>
                 <div className="product-list">
-                    <table className="product-table">
-                        <thead>
-                            <tr>
-                                <th>Наименование</th>
-                                <th>ID</th>
-                                <th>Цена</th>
-                                <th>Действия</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {products.map(product => (
-                                <tr key={product._id}>
-                                    <td>{product.name}</td>
-                                    <td>{product._id}</td>
-                                    <td>{product.price}</td>
-                                    <td>
-                                        <button onClick={() => handleDelete(product._id)}>Удалить</button>
-                                    </td>
+                    {loading ? (
+                        <LoadingSpinner />
+                    ) : (
+                        <table className="product-table">
+                            <thead>
+                                <tr>
+                                    <th className='column1'>Артикул</th>
+                                    <th className='column2'>Наименование</th>
+                                    <th className='column3'>Количество</th>
+                                    <th className='column4'>Цена</th>
+                                    <th className='column5'>Действия</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {products.map(product => (
+                                    <tr key={product._id}>
+                                        <td className='column1'>{product.article}</td>
+                                        <td className='column2'>{product.name}</td>
+                                        <td className='column3'>{product.quantity_in_stock}</td>
+                                        <td className='column4'>
+                                            {formatPrice(product.price)}
+                                        </td>
+                                        <td className='column5'>
+                                            <button onClick={() => handleDelete(product._id)}>
+                                                <img src={deleteProduct} alt="delete" />
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
                 </div>
                 {deletedProductId && (
                     <div className="response-message">

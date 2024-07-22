@@ -20,6 +20,7 @@ import AddCategory from './components/AdminPage/Category/AddCategory';
 import AddManufacturer from './components/AdminPage/Manufacturer/AddManufacturer';
 
 import DeleteProduct from './components/AdminPage/Product/DeleteProduct';
+import DeleteCategory from './components/AdminPage/Category/DeleteCategory';
 
 const AppRoutes = ({ isAdminRoute }) => {
   return (
@@ -43,6 +44,7 @@ const AppRoutes = ({ isAdminRoute }) => {
       <Route path="/admin/addManufacturer" element={<AddManufacturer />} />
 
       <Route path="/admin/deleteProduct" element={<DeleteProduct />} />
+      <Route path="/admin/deleteCategory" element={<DeleteCategory />} />
     </Routes>
   );
 };

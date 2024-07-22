@@ -6,7 +6,7 @@ import photoGreen from './img/photo-green.svg';
 import photoGray from './img/photo-gray.svg';
 import changeGray from './img/change-gray.svg';
 
-const ProductList = ({ products, quantities, onAddToCart, onQuantityChange, onMouseOver, onMouseOut, modalPhoto, activeProduct, formatPrice }) => {
+const ProductList = ({ products, quantities, cart, onAddToCart, onRemoveFromCart, onQuantityChange, onMouseOver, onMouseOut, modalPhoto, activeProduct, formatPrice }) => {
     return (
         <table>
             <thead>
@@ -32,6 +32,8 @@ const ProductList = ({ products, quantities, onAddToCart, onQuantityChange, onMo
                         quantityClass = 'in-stock';
                         displayQuantity = '>20';
                     }
+
+                    const cartItem = cart.find(item => item.productId === product._id);
 
                     return (
                         <tr key={product._id}>
@@ -64,7 +66,12 @@ const ProductList = ({ products, quantities, onAddToCart, onQuantityChange, onMo
                             </td>
                             <td className='column7 font-size-15 font-weight-500'>
                                 <div className="quantity-controls">
-                                    <button className='products__addBasket font-size-13 font-weight-500' onClick={() => onAddToCart(product)}>В корзину</button>
+                                    <button 
+                                        className={`products__addBasket font-size-13 font-weight-500 ${cartItem ? 'remove' : ''}`} 
+                                        onClick={() => cartItem ? onRemoveFromCart(cartItem.cartItemId) : onAddToCart(product)}
+                                    >
+                                        {cartItem ? 'Убрать' : 'В корзину'}
+                                    </button>
                                     <div className="products__actionBasket">
                                         <span className='font-size-15 font-weight-500 products__valueBasket'>{quantities[product._id]}</span>
                                         <div className="products__valueButton">
@@ -85,7 +92,9 @@ const ProductList = ({ products, quantities, onAddToCart, onQuantityChange, onMo
 ProductList.propTypes = {
     products: PropTypes.array.isRequired,
     quantities: PropTypes.object.isRequired,
+    cart: PropTypes.array.isRequired,
     onAddToCart: PropTypes.func.isRequired,
+    onRemoveFromCart: PropTypes.func.isRequired,
     onQuantityChange: PropTypes.func.isRequired,
     onMouseOver: PropTypes.func.isRequired,
     onMouseOut: PropTypes.func.isRequired,

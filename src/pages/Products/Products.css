@@ -136,6 +136,11 @@ tbody tr:last-child td{
     cursor: pointer;
 }
 
+.products__addBasket.remove{
+    background: var(--grey-color)!important;
+    color: var(--dark-grey-color);
+}
+
 .products__addBasket:hover{
     background: var(--active-green-color);
 }
@@ -241,4 +246,22 @@ tbody tr:last-child td{
 
 .products__filter-count{
     color: var(--green-color);
+}
+
+.products__filter-settings{
+    display: flex;
+    gap: 20px;
+}
+
+.products__filter select{
+    height: 43px;
+    width: 177px;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid var(--dark-grey-color);
+    padding: 0 14px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
 }

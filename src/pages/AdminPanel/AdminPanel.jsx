@@ -36,7 +36,7 @@ const AdminPanel = () => {
                         <span>
                             <Link to='/admin/addCategory' className='font-size-20 font-weight-500'>Добавление<br />категории</Link>
                             <Link to='' className='font-size-20 font-weight-500'>Редактирование<br />категории</Link>
-                            <Link to='' className='font-size-20 font-weight-500'>Удаление<br />категории</Link>
+                            <Link to='/admin/deleteCategory' className='font-size-20 font-weight-500'>Удаление<br />категории</Link>
                         </span>
                     </div>
                     <div>

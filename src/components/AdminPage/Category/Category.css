@@ -1,0 +1,27 @@
+.deleteCategory .category-list tr{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.deleteCategory .category-list tr td,
+.deleteCategory .category-list tr th{
+    display: flex;
+    justify-content: center;
+}
+
+.deleteCategory .category-list tr .column1{
+    padding: 0 32px;
+    width: 1000px;
+    justify-content: flex-start;
+}
+
+.deleteCategory .category-list tr .column2{
+    padding: 0 16px;
+    width: 170px;
+}
+
+.deleteCategory button{
+    background: none;
+    cursor: pointer;
+    border: 0;
+}

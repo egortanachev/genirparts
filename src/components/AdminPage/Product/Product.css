@@ -1,4 +1,51 @@
-.product-list tr{
+.deleteProduct .product-list tr{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.deleteProduct .product-list tr td,
+.deleteProduct .product-list tr th{
+    display: flex;
+    justify-content: center;
+}
+
+.deleteProduct .product-list tr .column1{
+    padding: 0 16px;
+    width: 144px;
+}
+
+.deleteProduct .product-list tr .column2{
+    padding: 0 16px;
+    width: 605px;
+    justify-content: flex-start;
+}
+
+.deleteProduct .product-list tr .column3{
+    padding: 0 16px;
+    width: 124px;
+}
+
+.deleteProduct .product-list tr .column4{
+    padding: 0 16px;
+    width: 124px;
+}
+
+.deleteProduct .product-list tr .column5{
+    padding: 0 16px;
+    width: 141px;
+}
+
+.deleteProduct button{
+    background: none;
+    cursor: pointer;
+    border: 0;
+}
+
+.section__adminpanel form .form-group select{
+    background: url(./img/sort.svg) center right 12px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
