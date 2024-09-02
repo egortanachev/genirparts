@@ -17,7 +17,7 @@ const CategoryList = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('/api/categories');
+                const response = await axios.get('https://66d6248ff5859a70426876c2.mockapi.io/Categories');
                 setCategories(response.data);
             } catch (err) {
                 setError(err);
